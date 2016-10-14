@@ -1,0 +1,67 @@
+//
+//  KS_inke.pch
+//  KS_inke
+//
+//  Created by 耳动人王 on 16/10/9.
+//  Copyright © 2016年 KS. All rights reserved.
+//
+
+#ifndef KS_inke_pch
+#define KS_inke_pch
+
+//常用常量宏定义
+//RGB颜色
+#define KSColor(r,g,b) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:1.0]
+
+//随机颜色
+#define KSRandomColor KSColor((arc4random_uniform(256)),(arc4random_uniform(256)),(arc4random_uniform(256)))
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+
+
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
+#define KSHomeNavMiddleViewWidth (SCREEN_WIDTH - 100)
+
+
+
+
+
+
+#ifdef DEBUG // 处于开发阶段
+#define KSLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define KSLog(...)
+#endif
+
+
+//*****************************************************************/
+//常用头文件包含
+#import <YYKit.h>
+#import <MJExtension.h>
+#import <UIImageView+WebCache.h>
+#import "KSConstant.h"
+#import "ToolClass.h"
+#import "KSAPIConfig.h"
+#import "KSRequestTool.h"
+
+
+
+
+
+
+
+
+
+#endif /* KS_inke_pch */

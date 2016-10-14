@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KSStartLiveController">
+            <connections>
+                <outlet property="closeBtn" destination="FST-ti-Wh4" id="ddd-fA-nDZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_zbfx" translatesAutoresizingMaskIntoConstraints="NO" id="bJK-sT-8ob"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xt-pd-gD6" userLabel="place">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="武汉市" image="launch_map_on"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FST-ti-Wh4" userLabel="close">
+                    <state key="normal" image="launch_close"/>
+                    <connections>
+                        <action selector="closeLive:" destination="-1" eventType="touchUpInside" id="sXl-S4-UGa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me4-KA-pMP" userLabel="startLive">
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <state key="normal" title="开始直播" backgroundImage="room_button"/>
+                    <connections>
+                        <action selector="startLive:" destination="-1" eventType="touchUpInside" id="RN5-li-XMQ"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="给直播起个标题吧" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDu-xb-hm1" userLabel="liveTitle">
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bJK-sT-8ob" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0Tb-EM-Dfi"/>
+                <constraint firstItem="2xt-pd-gD6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="1GT-lM-hiZ"/>
+                <constraint firstAttribute="trailing" secondItem="FST-ti-Wh4" secondAttribute="trailing" constant="10" id="5SH-OP-4la"/>
+                <constraint firstItem="Me4-KA-pMP" firstAttribute="top" secondItem="sDu-xb-hm1" secondAttribute="bottom" constant="20" id="6Rr-x9-LFU"/>
+                <constraint firstItem="sDu-xb-hm1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7S5-4h-LRz"/>
+                <constraint firstAttribute="trailing" secondItem="bJK-sT-8ob" secondAttribute="trailing" id="Db7-Vr-47e"/>
+                <constraint firstItem="2xt-pd-gD6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="JUN-vn-Ktg"/>
+                <constraint firstItem="Me4-KA-pMP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TaA-gX-mlk"/>
+                <constraint firstItem="sDu-xb-hm1" firstAttribute="width" secondItem="Me4-KA-pMP" secondAttribute="width" id="atq-Wb-wYu"/>
+                <constraint firstItem="bJK-sT-8ob" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="azD-V9-xfJ"/>
+                <constraint firstAttribute="bottom" secondItem="bJK-sT-8ob" secondAttribute="bottom" id="d9W-5V-tuS"/>
+                <constraint firstItem="Me4-KA-pMP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iaj-Mb-bqt"/>
+                <constraint firstItem="FST-ti-Wh4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="j7h-f7-g6W"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="59.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_zbfx" width="375" height="667"/>
+        <image name="launch_close" width="64" height="64"/>
+        <image name="launch_map_on" width="26" height="26"/>
+        <image name="room_button" width="250" height="44"/>
+    </resources>
+</document>
